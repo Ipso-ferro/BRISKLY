@@ -1,0 +1,620 @@
+* {
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+/* VARIABLES */
+:root {
+    --shadow-boxes: 2px 2px 3px rgba(0, 0, 0, 0.4);
+    --margenes: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+   
+
+
+/* MOBILE*/
+
+@media (max-width:400px) {
+    
+/* ESCONDEMOS LOS COMPONENTES QUE SOLO ESTAN EN DESKTOP */
+
+.solo_esta_en_desktop {
+    display: none;
+}
+
+/* NAV */
+
+    nav {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 5%;
+        margin-right: 5%;
+        
+    }
+    nav img {
+        height: 50px;
+        width: 50px;
+        margin-left: 0.5rem;
+    }
+
+/* FIRST SECTION */
+
+.hire_or_job {
+        text-align: center;
+        padding: 15%;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto;
+        gap: 2rem;
+        box-shadow: var(--shadow-boxes);
+        background: linear-gradient(to right, rgba(91, 8, 81, 0.568), rgb(128, 126, 129));
+        background-size: 200% auto;
+        animation: movimiento-olas 10s linear infinite;
+        height: 500px;
+      }
+      
+      @keyframes movimiento-olas {
+        0% {
+          background-position: left;
+        }
+        50% {
+          background-position: right;
+        }
+        100% {
+          background-position: left;
+        }
+
+    } 
+
+.hire_or_job_first_text {
+
+        grid-column: 1 / span 2;
+        color: rgba(0, 0, 0, 0.6);
+        background-color: rgba(255, 255, 255, 0.242);
+        border-radius: 15%;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        text-align: center;
+         
+    }
+
+
+.hire_or_job_container_2_words {
+  display: flex;
+
+}
+
+.hire_or_job_yellow_text {
+        color: yellow;
+        text-decoration: underline solid;
+        font-weight: bold;
+
+        
+    }
+
+.hire_or_job_white_text {
+        color: white;
+        font-weight: bold;
+        text-decoration: underline solid;
+        justify-content: end;
+        
+    }
+
+.hire_or_job_last_text {
+
+        grid-column: 1 / span 2;
+        color: rgba(0, 0, 0, 0.6);
+        background-color: rgba(255, 255, 255, 0.242);
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 5%;
+    }
+
+
+/* VIDEO */
+.display-para-los-videos {
+    display: grid;
+    height: 250px;
+    width: 400px;
+    grid-template-rows: 60% 40%;
+    position: relative;
+    box-shadow: var(--shadow-boxes);
+}
+
+.display-para-los-videos_amarillo {
+    background-color: rgba(225, 225, 41, 0.8);
+    position: relative;
+}
+.video_en_el_display video{
+   position:absolute;
+   top: 10%;
+   left: 3.5%;
+   right: 5%;
+   bottom: 0%;
+   width: 360px;
+   height: 200px;
+   
+   animation: play 5s linear infinite;
+
+   @keyframes play {
+    0% {
+        transform: scale (0);
+        opacity: (1);
+    }
+    50% {
+        transform: scale (1);
+        opacity: (1);
+    }
+    100% {
+        transform: scale (0);
+        opacity: (1);
+    }
+   }
+}
+
+
+/*PROYECTOS HECHOS ANTERIORMENTE*/
+
+/* SERVICES */
+
+.services {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto;
+    gap: 0.5rem;
+    
+}
+.services_heart {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.services_texto_next_to_heart {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    border: var(--margenes);
+    border-radius: 8%;
+    margin-right: 5rem;
+    padding-left: 1rem;
+}
+.services_title{
+    grid-column: 1 / span 2;
+    margin: 0.5rem;
+}
+.services_description {
+    grid-column: 1 / span 2;
+}
+.services_texto_morado {
+    color:  rgb(74, 16, 128);
+    font-size: large;
+}
+.services_texto_amarillo {
+    color: rgba(197, 197, 40, 0.899) ;
+    font-weight: bold;
+    font-size: large;
+}
+.services_description {
+    padding: 1rem;
+    text-align: justify;
+}
+
+/*CLIENTS REVIEW*/
+.clients_review {
+    box-shadow: var(--shadow-boxes);
+}
+.clients_review_title {
+    color: rgb(74, 16, 128);
+    margin: 0.5rem;
+}
+.clientss_review_container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows:  auto auto;
+}
+
+.clients_review_container_avatar {
+    grid-row: 1 / span 2;
+    margin-left: 1rem ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clients_review_container_avatar img{
+    border-radius: 20%;
+    width: 110%;
+    box-shadow: var(--shadow-boxes);
+}
+.clients_review_container_text {
+
+    height: 60px;
+    margin: 0.2rem 1rem 1rem 1rem;
+    text-align: justify;
+    display: flex;
+    align-items: center;
+    font-size: small;
+    
+}
+.clients_review_container_stars {
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    height: 50px;
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/*BRISKLIES REVIEW (SE UTILIZO EL MISMO FORMATO Y DIVS DE CLIENTS REVIEW)*/
+
+.Briskly_review {
+    background-color: rgba(224, 222, 222, 0.881);
+}
+
+/* CONTACT */
+
+footer {
+    background-color: black;
+    color: white;
+    height: 550px;
+}
+
+.presentation {
+    padding: 1rem;
+}
+.presentation_form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items:flex-end;
+    margin-top: 3rem;
+   
+}
+
+footer h3 {
+    margin-top: 90px;
+    text-align: center;
+}
+
+}
+/* DESKTOP */
+
+
+@media (min-width:401px) {
+
+/* NAV */
+
+nav {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px rgb(156, 156, 156) solid;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    background-color: rgba(243, 243, 243, 0.5);
+    
+}
+
+nav h2 {
+    color: blueviolet;
+    padding-right: 10rem;
+}
+nav img {
+    height: 50px;
+    width: 50px;
+    margin-left: 0.5rem;
+}
+
+.nav_logo{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-left: 0.2rem;
+}
+
+.nav_text_derecha{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-right: 1rem;
+}
+/* FIRST SECTION WITHE*/
+.solo_esta_en_desktop_logo img {
+    height: 50px;
+    width: 50px;
+    margin: 0.5rem;
+}
+
+.container_section {
+    display: flex;
+}
+
+
+.hire_or_job {
+    margin: 7rem 10% 3rem 0;
+    background: linear-gradient(to right, rgba(91, 8, 81, 0.568), rgb(128, 126, 129));
+    background-size: 200% auto;
+    animation: movimiento-olas 10s linear infinite;
+    height: 370px;
+    width: 100%;   
+  }
+  
+  @keyframes movimiento-olas {
+    0% {
+      background-position: left;
+    }
+    50% {
+      background-position: right;
+    }
+    100% {
+      background-position: left;
+    }
+
+} 
+
+/* FOTOS DE LA PRIMERA SECCION */
+
+  .solo_esta_en_desktop_huge img{
+    position: absolute;
+    width: 500PX;
+    height: 300px;
+    right: 2%;
+    object-fit: cover;
+    z-index: 2;
+    margin-top: 3%;
+    border-radius: 15px 50px 30px;
+    box-shadow: var(--shadow-boxes);
+  }  
+  .solo_esta_en_desktop_bug img {
+    position: absolute;
+    width: 210PX;
+    height: 480px;
+    right: 40%;
+    top: 8%;
+    object-fit: cover;
+    z-index: 2;
+    margin-top: 1%;
+    border-radius: 15px 50px 30px 5px;
+    box-shadow: var(--shadow-boxes);
+  }
+
+  .solo_esta_en_desktop_driver img{
+    position: absolute;
+    width: 210PX;
+    height: 480px;
+    right: 22%;
+    top: 48%;
+    object-fit: cover;
+    z-index: 2;
+    margin-top: 1%;
+    border-radius: 50px 0px 50px 0px;
+    box-shadow: var(--shadow-boxes);
+  }
+
+/* formas del background */
+
+
+  .solo_esta_en_desktop .circule {
+    height: 400px;
+    background-color: rgba(91, 8, 81, 0.568);
+    margin-left: 50%;
+    border-radius: 50%;
+    clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%, 50% 50%);
+    transform: rotate(180deg);
+    order: 2;
+    aspect-ratio: 1/1;
+    margin-top: 12%;
+    z-index: 1;
+}
+
+  .hire_or_job_container_2_words {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 2%;
+    margin-right: 60%;
+  }
+
+
+/* contenido primera seccion */
+
+
+.hire_or_job_first_text {
+
+    grid-column: 1 / span 2;
+    color: rgba(0, 0, 0, 0.6);
+    background-color: white;
+    border-radius: 10%;
+    height: 80px;
+    display: flex;
+    align-items: center; 
+    margin: 2% 60% 2% 5%;
+     
+}
+
+.hire_or_job_yellow_text {
+    color: white;
+    text-decoration: underline solid;
+    font-weight: bold;
+
+    
+}
+
+.hire_or_job_white_text {
+    color: yellow;
+    font-weight: bold;
+    text-decoration: underline solid;
+    justify-content: end;
+    
+}
+
+.hire_or_job_last_text {
+
+    grid-column: 1 / span 2;
+    color: rgba(0, 0, 0, 0.6);
+    background-color: white;
+    border-radius: 10%;
+    height: 80px;
+    display: flex;
+    align-items: center; 
+    margin: 2% 60% 10% 5%;
+     
+}
+
+
+/* VIDEO */
+.display-para-los-videos {
+    display: flex;
+}
+
+.display-para-los-videos video {
+    width: 70%;
+    margin-left: 4%;
+    order: 1;
+    animation: play 5s;
+    animation-fill-mode: forwards;
+  
+}
+.display-para-los-videos_amarillo {
+    background-color: yellow;
+    width: 70%;
+    height: 370px;
+    display: flex;
+    text-align: end;
+    order: 2;
+}
+
+
+@keyframes play {
+    0% {
+      transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+/* PROYECTOS HECHOS ANTERIORMENTE*/
+
+
+.solo_esta_en_desktop_proyectos_anteriores {
+    margin-top: 5%;
+    padding: 2%;
+    background-color: rgba(224, 222, 222, 0.881);
+    
+    
+}
+
+.solo_esta_en_desktop_proyectos_anteriores img {
+    height: 100%
+}
+
+
+
+/* SERVICES */
+
+.services {
+display: grid;
+grid-template-rows: auto auto auto;
+grid-template-columns: 2% 23.5% auto;
+row-gap: 5%;
+margin: 2%;
+
+}
+.services_heart {
+display: flex;
+align-items: center;
+justify-content: start;
+grid-column: 1;
+}
+.services_texto_next_to_heart {
+display: flex;
+align-items: center;
+justify-content: start;
+border: var(--margenes);
+border-radius: 8%;
+margin-right: 5rem;
+padding-left: 1rem;
+grid-column: 2;
+
+}
+.services_title {
+grid-column: 1 / span 3;
+margin-bottom: 5%;
+}
+
+.services_texto_morado {
+color:  rgb(74, 16, 128);
+font-size: large;
+}
+.services_texto_amarillo {
+color: rgba(197, 197, 40, 0.899) ;
+font-weight: bold;
+font-size: xx-large;
+}
+.services_description {
+padding: 1rem;
+text-align: justify;
+grid-column: 3;
+grid-row: 2 / span 3;
+align-items: center;
+justify-content: center;
+display: flex;
+}
+
+/*CLIENTS REVIEW*/
+.clients_review {
+display: none;
+}
+
+
+/*BRISKLIES REVIEW (SE UTILIZO EL MISMO FORMATO Y DIVS DE CLIENTS REVIEW)*/
+
+.Briskly_review {
+display: none;
+}
+
+/* CONTACT */
+
+footer {
+background-color: black;
+color: white;
+height: 550px;
+}
+
+.presentation {
+padding: 1rem;
+}
+.presentation_form {
+display: flex;
+flex-direction: column;
+gap: 2rem;
+align-items:flex-end;
+margin-top: 3rem;
+
+}
+
+footer h3 {
+margin-top: 90px;
+text-align: center;
+}
+
+}

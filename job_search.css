@@ -1,0 +1,108 @@
+* {
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+/* VARIABLES */
+:root {
+    --shadow-boxes: 2px 2px 3px rgba(0, 0, 0, 0.4);
+    --margenes: 1px solid rgba(193, 190, 190, 0.744);
+}
+
+    
+
+
+/* MOBILE*/
+
+@media (max-width:400px) {
+    
+
+
+body {
+
+    background: linear-gradient(to right, rgba(91, 8, 81, 0.568), rgb(128, 126, 129));
+    background-size: 200% auto;
+    animation: movimiento-olas 10s linear infinite;
+}
+
+@keyframes movimiento-olas {
+    
+     
+   
+        0% {
+          background-position: left;
+        }
+        50% {
+          background-position: right;
+        }
+        100% {
+          background-position: left;
+        }
+
+}
+
+/* NAV */
+
+nav {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    background-color: white;
+    
+}
+nav img {
+    height: 50px;
+    width: 50px;
+    margin-left: 0.5rem;
+}
+
+nav h4 {
+    width: 100px;
+    margin-left: 100%;
+    font-size: medium;
+    color:  rgb(221, 221, 93);
+    font-weight: bold;
+
+}
+
+
+/* SELECCION BUSQUEDA DE TRABAJO*/
+
+
+
+.Busqueda_trabajo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+    font-weight: bold;
+    text-align: justify;
+    
+}
+
+.Busqueda_trabajo img {
+    filter:grayscale(70%);
+
+}
+
+.Busqueda_trabajo_titulo {
+    padding: 0.5rem;
+    text-align: justify;
+   
+}
+
+.Busqueda_trabajo_map {
+    border: var(--margenes);
+    box-shadow: var(--shadow-boxes);
+}
+
+}

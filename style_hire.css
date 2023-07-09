@@ -1,0 +1,94 @@
+* {
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+/* VARIABLES */
+:root {
+    --shadow-boxes: 2px 2px 3px rgba(0, 0, 0, 0.4);
+    --margenes: 1px solid rgba(193, 190, 190, 0.744);
+}
+
+    
+
+
+/* MOBILE*/
+
+@media (max-width:400px) {
+    
+
+/* NAV */
+
+    nav {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        
+    }
+    nav img {
+        height: 50px;
+        width: 50px;
+        margin-left: 0.5rem;
+    }
+
+    nav h4 {
+        width: 100px;
+        margin-left: 100%;
+        font-size: medium;
+        color: rgb(112, 52, 169);
+        font-weight: bold;
+
+    }
+
+    nav span {
+        color: rgb(221, 221, 93);
+        text-decoration: underline;
+    }
+
+}   
+
+/* SELECCION */
+
+.seleccion {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.lista-seleccion {
+  position: relative;
+  perspective: 1000px;
+  height: 200px;
+  width: 100%;
+  overflow: auto;
+  cursor: pointer;
+  border-top: var(--margenes);
+  border-bottom: var(--margenes);
+  text-align: center;
+}
+
+.lista-seleccion :active{
+    background-color: black;
+    color: white;
+}
+
+.seleccion_ciudad {
+    color: rgb(221, 221, 93);
+    font-weight: bold;
+}
+
+
+.seleccion_trabajo {
+    color: rgb(112, 52, 169);
+    font-weight: bold;
+}
