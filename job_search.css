@@ -119,13 +119,13 @@ body {
     /* NAV */
 nav {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
     border-bottom: 1px rgb(156, 156, 156) solid;
     width: 100%;
     background-color: rgba(243, 243, 243, 0.5);
     font-size: small;
-    
 }
 
 nav h2 {

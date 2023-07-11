@@ -131,7 +131,7 @@ a {
 .display-para-los-videos {
     display: grid;
     height: 250px;
-    width: 400px;
+    width: 100%;
     grid-template-rows: 60% 40%;
     position: relative;
     box-shadow: var(--shadow-boxes);
@@ -147,25 +147,9 @@ a {
    left: 3.5%;
    right: 5%;
    bottom: 0%;
-   width: 360px;
+   width: 94%;
    height: 200px;
-   
-   animation: play 5s linear infinite;
-
-   @keyframes play {
-    0% {
-        transform: scale (0);
-        opacity: (1);
-    }
-    50% {
-        transform: scale (1);
-        opacity: (1);
-    }
-    100% {
-        transform: scale (0);
-        opacity: (1);
-    }
-   }
+   border-radius: 10%;
 }
 
 
@@ -216,6 +200,9 @@ a {
 }
 
 /*CLIENTS REVIEW*/
+.Briskly_review {
+    width: 100%;
+}
 .clients_review {
     box-shadow: var(--shadow-boxes);
 }
