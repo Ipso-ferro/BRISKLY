@@ -38,8 +38,10 @@ a {
         justify-content: space-between;
         margin-left: 5%;
         margin-right: 5%;
+    
         
     }
+
     nav img {
         height: 50px;
         width: 50px;
@@ -597,23 +599,43 @@ display: none;
 footer {
 background-color: black;
 color: white;
-height: 550px;
+height: 900px;
+}
+.presentation_name {
+    font-size: xx-large;
 }
 
+.presentation_name h1 {
+    font-weight: bolder;
+    color: blueviolet;
+}
 .presentation {
-padding: 1rem;
+    padding: 3rem;
 }
 .presentation_form {
 display: flex;
 flex-direction: column;
 gap: 2rem;
-align-items:flex-end;
-margin-top: 3rem;
+align-items: center;
+margin-top: 7rem;
+margin-right: 35%;
+
+}
+.presentation_form_boxes input{
+    width: 400%;
+    border-radius: 15%;
+    height: 30px;
+    text-align: center;
+    font-weight: bold;
 
 }
 
+.presentacion_form_btn {
+    margin-left: 48%;
+    margin-top: 3%;
+}
 footer h3 {
-margin-top: 90px;
+margin-top: 150px;
 text-align: center;
 }
 
