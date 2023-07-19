@@ -1,0 +1,234 @@
+.hire_or_job {
+        @include phone {
+            text-align: center;
+            padding: 15%;
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: auto auto auto;
+            gap: 2rem;
+            box-shadow: var(--shadow-boxes);
+            background: linear-gradient(to right, rgba(91, 8, 81, 0.568), rgb(128, 126, 129));
+            background-size: 200% auto;
+            animation: movimiento-olas 10s linear infinite;
+            height: 500px;
+        
+        
+        @keyframes movimiento-olas {
+            0% {
+            background-position: left;
+            }
+            50% {
+            background-position: right;
+            }
+            100% {
+            background-position: left;
+            };}
+
+                &_first_text {
+            
+                    grid-column: 1 / span 2;
+                    color: rgba(0, 0, 0, 0.6);
+                    background-color: rgba(255, 255, 255, 0.242);
+                    border-radius: 15%;
+                    height: 80px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center; 
+                    text-align: center;
+                    
+                }
+
+
+                &_container_2_words {
+                display: flex;
+                
+                }
+                
+                &_yellow_text {
+                        color: yellow;
+                        text-decoration: underline solid;
+                        font-weight: bold;
+                
+                        
+                }
+                
+                &_white_text {
+                        color: white;
+                        font-weight: bold;
+                        text-decoration: underline solid;
+                        justify-content: end;
+                        
+                }
+                
+                &_last_text {
+                
+                        grid-column: 1 / span 2;
+                        color: rgba(0, 0, 0, 0.6);
+                        background-color: rgba(255, 255, 255, 0.242);
+                        height: 100px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        border-radius: 5%;
+                }
+            
+
+    } }        
+
+
+
+/*DESKTOP*/
+
+/* FIRST SECTION WITHE*/
+
+
+@include desktop {
+
+    .container_section {
+        display: flex;
+        
+        & img {
+            height: 50px;
+            width: 50px;
+            margin: 0.5rem;
+        }
+        
+        .hire_or_job {
+            margin: 7rem 10% 3rem 0;
+            background: linear-gradient(to right, rgba(91, 8, 81, 0.568), rgb(128, 126, 129));
+            background-size: 200% auto;
+            animation: movimiento-olas 10s linear infinite;
+            height: 370px;
+            width: 100%;   
+          }
+          
+          @keyframes movimiento-olas {
+            0% {
+              background-position: left;
+            }
+            50% {
+              background-position: right;
+            }
+            100% {
+              background-position: left;
+            }
+        
+        } 
+    
+        
+    /* FOTOS DE LA PRIMERA SECCION */
+    
+        & .solo_esta_en_desktop_huge img{
+            position: absolute;
+            width: 450PX;
+            height: 250px;
+            right: 2%;
+            object-fit: cover;
+            z-index: 2;
+            margin-top: 3%;
+            border-radius: 15px 50px 30px;
+            box-shadow: var(--shadow-boxes);
+        }  
+        & .solo_esta_en_desktop_bug img {
+            position: absolute;
+            width: 200PX;
+            height: 480px;
+            right: 40%;
+            top: 8%;
+            object-fit: cover;
+            z-index: 2;
+            margin-top: 1%;
+            border-radius: 15px 50px 30px 5px;
+            box-shadow: var(--shadow-boxes);
+        }
+    
+        & .solo_esta_en_desktop_driver img{
+            position: absolute;
+            width: 200PX;
+            height: 480px;
+            right: 22%;
+            top: 48%;
+            object-fit: cover;
+            z-index: 2;
+            margin-top: 1%;
+            border-radius: 50px 0px 50px 0px;
+            box-shadow: var(--shadow-boxes);
+        }
+    
+    }
+    
+    
+    /* formas del background */
+    
+    
+      .solo_esta_en_desktop .circule {
+        height: 400px;
+        background-color: rgba(91, 8, 81, 0.568);
+        margin-left: 50%;
+        border-radius: 50%;
+        clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%, 50% 50%);
+        transform: rotate(180deg);
+        order: 2;
+        aspect-ratio: 1/1;
+        margin-top: 12%;
+        z-index: 1;
+    }
+    
+    
+    
+    
+      .hire_or_job_container_2_words {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 2%;
+        margin-right: 60%;
+      }
+    
+    
+    /* contenido primera seccion */
+    
+    
+    .hire_or_job_first_text {
+    
+        grid-column: 1 / span 2;
+        color: rgba(0, 0, 0, 0.6);
+        background-color: white;
+        border-radius: 10%;
+        height: 80px;
+        display: flex;
+        align-items: center; 
+        margin: 2% 60% 2% 5%;
+         
+    }
+    
+    .hire_or_job_yellow_text {
+        color: white;
+        text-decoration: underline solid;
+        font-weight: bold;
+    
+        
+    }
+    
+    .hire_or_job_white_text {
+        color: yellow;
+        font-weight: bold;
+        text-decoration: underline solid;
+        justify-content: end;
+        
+    }
+    
+    .hire_or_job_last_text {
+    
+        grid-column: 1 / span 2;
+        color: rgba(0, 0, 0, 0.6);
+        background-color: white;
+        border-radius: 10%;
+        height: 80px;
+        display: flex;
+        align-items: center; 
+        margin: 2% 60% 10% 5%;
+         
+    }
+}

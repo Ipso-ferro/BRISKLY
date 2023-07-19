@@ -1,0 +1,45 @@
+/* VARIABLES */
+:root {
+    --shadow-boxes: 2px 2px 3px rgba(0, 0, 0, 0.4);
+    --margenes: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+// CREAMOS LAS MEDIASQUERY
+
+@mixin phone {
+    @media (max-width:400px)
+        { @content }
+};
+
+
+@mixin desktop {
+    @media (min-width:401px) 
+        {@content}
+};
+
+
+// IMPORTAMOS LA BARRA NAV
+
+@import "./components/nav.scss";
+
+
+// IMPORTAMOS LA PRIMERA SECTION
+
+@import './components/first_section.scss';
+
+// IMPORTAMOS VIDEO DE LA PRIMERA SECTION
+
+@import './components/video_first_section.scss';
+
+// IMPORTAMOS SECTION DE SERVICIOS
+
+@import './components/services.scss';
+
+
+// IMPORTAMOS SECTION DE REVIEWS
+
+@import './components/reviews.scss';
+
+// IMPORTAMOS EL FOOTER
+
+@import './components/footer.scss'

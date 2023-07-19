@@ -1,0 +1,98 @@
+* {
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/* VARIABLES */
+:root {
+  --shadow-boxes: 2px 2px 3px rgba(0, 0, 0, 0.4);
+  --margenes: 1px solid rgba(193, 190, 190, 0.744);
+}
+
+/* NAV */
+nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px rgb(156, 156, 156) solid;
+  width: 100%;
+  background-color: rgba(243, 243, 243, 0.5);
+}
+
+nav img {
+  height: 50px;
+  width: 50px;
+  margin-left: 0.5rem;
+}
+
+.nav_logo {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-left: 0.2rem;
+}
+
+.nav_text_derecha {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+nav h4 {
+  font-size: medium;
+  color: rgb(112, 52, 169);
+  font-weight: bold;
+}
+
+nav span {
+  color: rgb(221, 221, 93);
+  text-decoration: underline;
+}
+
+/* SELECCION */
+.seleccion {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.lista-seleccion {
+  position: relative;
+  perspective: 1000px;
+  height: 200px;
+  width: 100%;
+  overflow: auto;
+  cursor: pointer;
+  border-top: var(--margenes);
+  border-bottom: var(--margenes);
+  text-align: center;
+  font-size: large;
+}
+
+.lista-seleccion :active {
+  color: rgb(194, 211, 63);
+}
+
+.seleccion_ciudad {
+  color: rgb(221, 221, 93);
+  font-weight: bold;
+}
+
+.seleccion_trabajo {
+  color: rgb(112, 52, 169);
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=style_hire.css.map */

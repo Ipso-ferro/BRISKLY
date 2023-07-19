@@ -1,0 +1,155 @@
+* {
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/* ESCONDEMOS LOS COMPONENTES QUE SOLO ESTAN EN DESKTOP */
+@media (max-width: 400px) {
+  .solo_esta_en_desktop {
+    display: none;
+  }
+}
+/*CLIENTS REVIEW LO ESCONDEMOS DE LA VERSION DESKTOP*/
+@media (min-width: 401px) {
+  .clients_review {
+    display: none;
+  }
+  .Briskly_review {
+    display: none;
+  }
+}
+/* VARIABLES */
+:root {
+  --shadow-boxes: 2px 2px 3px rgba(0, 0, 0, 0.4);
+  --margenes: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 400px) {
+  nav {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  nav img {
+    height: 50px;
+    width: 50px;
+    margin-left: 0.5rem;
+  }
+}
+@media (min-width: 401px) {
+  nav {
+    border-bottom: 1px rgb(156, 156, 156) solid;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    background-color: rgba(243, 243, 243, 0.5);
+  }
+  nav h2 {
+    color: blueviolet;
+    padding-right: 10rem;
+  }
+  nav img {
+    height: 50px;
+    width: 50px;
+    margin-left: 0.5rem;
+  }
+  nav .nav_logo {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-left: 0.2rem;
+  }
+  nav .nav_text_derecha {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-right: 1rem;
+  }
+}
+
+.Busqueda_trabajo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  font-weight: bold;
+  text-align: justify;
+}
+.Busqueda_trabajo img {
+  filter: grayscale(70%);
+  margin-top: 3rem;
+}
+.Busqueda_trabajo_titulo {
+  padding: 0.5rem;
+  text-align: justify;
+}
+.Busqueda_trabajo_map {
+  display: flex;
+  justify-content: center;
+}
+.Busqueda_trabajo_map iframe {
+  width: 500px;
+  height: 400px;
+  border-radius: 2%;
+}
+
+body {
+  background: linear-gradient(to right, rgba(91, 8, 81, 0.568), rgb(128, 126, 129));
+  background-size: 200% auto;
+  animation: movimiento-olas 10s linear infinite;
+}
+
+@keyframes movimiento-olas {
+  0% {
+    background-position: left;
+  }
+  50% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
+}
+/* MOBILE*/ /* 400 PX (MOBILE) */
+@media (max-width: 400px) {
+  /* NAV */
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px rgb(156, 156, 156) solid;
+    width: 100%;
+    background-color: rgba(243, 243, 243, 0.5);
+    font-size: small;
+  }
+  nav h2 {
+    color: blueviolet;
+  }
+  nav img {
+    height: 40px;
+    width: 40px;
+    margin-left: 0.5rem;
+  }
+  .Busqueda_trabajo_map iframe {
+    width: 300px;
+    height: 300px;
+    border-radius: 2%;
+  }
+}
+
+/*# sourceMappingURL=job_search.css.map */
