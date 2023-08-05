@@ -1,0 +1,52 @@
+.Briskly_review {
+    width: 100%;
+    padding: 2%;
+}
+.clients_review {
+    box-shadow: var(--shadow-boxes);
+}
+
+.clientss_review_container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows:  auto auto;
+}
+
+.clients_review_container_avatar {
+    grid-row: 1 / span 2;
+    margin-left: 1rem ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clients_review_container_avatar img{
+    border-radius: 20%;
+    width: 110%;
+    box-shadow: var(--shadow-boxes);
+}
+.clients_review_container_text {
+
+    height: 60px;
+    margin: 0.2rem 1rem 1rem 1rem;
+    text-align: justify;
+    display: flex;
+    align-items: center;
+    font-size: small;
+    
+}
+.clients_review_container_stars {
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    height: 50px;
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/*BRISKLIES REVIEW (SE UTILIZO EL MISMO FORMATO Y DIVS DE CLIENTS REVIEW)*/
+
+.Briskly_review {
+    background-color: rgba(224, 222, 222, 0.881);
+    padding: 2%;
+}

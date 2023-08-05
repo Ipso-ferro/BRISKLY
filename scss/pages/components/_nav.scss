@@ -1,0 +1,57 @@
+
+nav {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    @include phone {
+        margin-left: 5%;
+        margin-right: 5%;
+        
+        & img {
+            height: 50px;
+            width: 50px;
+            margin-left: 0.5rem;
+        }
+    }
+
+    @include desktop {
+        border-bottom: 1px rgb(156, 156, 156) solid;
+        position: fixed;
+        width: 100%;
+        z-index: 3;
+        background-color: rgba(243, 243, 243, 0.5);
+
+        & h2 {
+            color: blueviolet;
+            padding-right: 10rem;
+        }
+
+        & img {
+            height: 50px;
+            width: 50px;
+            margin-left: 0.5rem;
+        }
+        
+        & .nav_logo {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            margin-left: 0.2rem;
+        }
+
+        & .nav_text_derecha{
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            margin-right: 1rem;
+        }
+    }
+
+}
+
+
+
+
